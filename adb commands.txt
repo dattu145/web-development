@@ -1,0 +1,432 @@
+//////////////////////adb shell settings
+
+
+adb shell settings list system
+Android Settings provider (system namespace)
+
+
+adb shell settings get system volume_system
+Get current system volume level in Android.
+
+
+adb shell settings get system notification_sound
+Get current system notification sound in Android.
+
+ 
+adb shell settings list secure
+Android Settings provider (secure namespace)
+
+
+adb shell settings get secure android_id
+Find Android Device Identifier(Device Id)
+
+
+adb shell settings get secure bluetooth_address
+Find Bluetooth MAC address in android.
+
+
+adb shell settings list global
+Android Settings provider (global namespace)
+
+
+adb shell settings get global mobile_data
+Get current mobile data status in Android.
+
+
+adb shell settings get global wifi_on
+Get current WiFi status in Android.
+
+
+adb shell settings get (or) put system_volume
+sets or shows device volume
+
+adb shell settings put (or) get system screen_brightness
+sets or gets screen brightness
+
+adb shell settings put (or) get system screen_off_timeout
+sets or shows screen time out
+
+adb shell settings get (or) put system notification_sound
+sets or shows notification volume
+
+/////////////////////////adb shell wm
+
+adb shell wm density
+Get screen physical density in Android
+
+
+adb shell wm size
+Get screen physical size in Android
+
+
+///////////////////////////adb shell pm
+
+
+adb shell pm list packages
+Get List of Installed Apps in Android.
+
+
+adb shell pm list packages -s
+System apps
+
+
+adb shell pm list packages -3
+3rd-Party apps
+
+
+adb shell pm list packages <keywords>
+Keyword filtering
+
+
+adb shell pm path <package-name>
+Get the APK path on the device's filesystem.
+
+
+///////////////////// adb shell screencap
+
+adb shell screencap -d 0 /sdcard/test.png
+Take a screenshot on Android
+
+
+adb shell pull /sdcard/test.png
+Download test.png file from Android Device.
+
+
+////////////////////// adb shell getprop
+
+
+adb shell getprop
+Get Android system properties info.
+
+
+adb shell getprop ro.build.version.sdk
+Get SDK API level.
+
+
+adb shell getprop ro.build.version.security_patch
+Get Android security patch version.
+
+
+adb shell getprop ro.board.platform
+Get Soc info.
+
+
+adb shell getprop ro.build.version.release
+Get Android version info.
+  
+
+adb shell getprop ro.vendor.product.model
+Get Android device model.
+
+
+adb shell getprop ro.product.manufacturer
+Get Android device manufacturer.
+ 
+
+adb shell getprop ro.serialno
+Get ADB serial number.
+
+
+adb shell getprop ro.oem_unlock_supported
+Get OEM unlock status.
+
+
+adb shell getprop ro.bootimage.build.fingerprint
+Get Android device build fingerprint.
+
+
+adb shell getprop ro.boot.wifimacaddr
+Get WiFi MAC Address
+
+
+
+///////////////////adb shell dumpsys battery
+
+
+
+adb shell dumpsys battery
+Get battery info in Android
+
+
+adb shell dumpsys battery set level <n> (change the level from 0 to 100)
+adb shell dumpsys battery set status<n> (change the level to unknown, charging, discharging, not charging or full)
+adb shell dumpsys battery reset (reset the battery)
+adb shell dumpsys battery set usb <n> (change the status of USB connection. ON or OFF)
+adb shell wm size WxH (sets the resolution to WxH)
+
+
+///////////////////Package Info
+
+
+adb shell list packages (list package names)
+adb shell list packages -r (list package name + path to apks)
+adb shell list packages -3 (list third party package names)
+adb shell list packages -s (list only system packages)
+adb shell list packages -u (list package names + uninstalled)
+adb shell dumpsys package packages (list info on all apps)
+adb shell dump <name> (list info on one package)
+adb shell path <package> (path to the apk file)
+
+
+
+///////////////////////adb shell input keyevent
+
+
+adb shell input keyevent 187
+KEYCODE_APP_SWITCH
+
+
+adb shell input keyevent 3
+KEYCODE_HOME
+
+
+adb shell input keyevent 84
+KEYCODE_SEARCH
+ 
+
+adb shell input keyevent 219
+KEYCODE_ASSIST
+
+
+adb shell input keyevent 231
+Voice Assist key
+
+
+adb shell input keyevent 5
+KEYCODE_CALL
+
+
+adb shell input keyevent 6
+KEYCODE_ENDCALL
+
+
+adb shell input keyevent 7
+KEYCODE_0 
+
+
+adb shell input keyevent 16
+KEYCODE_9
+
+
+adb shell input keyevent 29
+KEYCODE_A
+
+
+
+adb shell input keyevent 54
+KEYCODE_Z
+
+
+adb shell input keyevent 66
+KEYCODE_ENTER
+
+
+adb shell input keyevent 67
+KEYCODE_DEL
+
+
+adb shell input keyevent 24
+KEYCODE_VOLUME_UP
+
+
+adb shell input keyevent 25
+KEYCODE_VOLUME_DOWN
+
+
+adb shell input keyevent 164
+toggle MUTE the speaker
+
+
+adb shell input keyevent 91
+toggle MUTE the microphone
+
+
+adb shell input keyevent --longpress 26
+Long PRESS power key
+
+
+adb shell input keyevent 26
+KEYCODE_POWER
+
+
+adb shell input keyevent 2
+KEYCODE_CAMERA
+ 
+
+adb shell input keyevent 223
+Lock screen.
+
+ 
+adb shell input keyevent 224
+Wakes up the device.
+
+
+/////////////////////// adb shell input text
+
+
+adb shell input text <string>
+Sending Keyboard input to your Android device.
+
+adb shell input text Nexus
+
+adb shell input text ADB%sInstaller
+Tips: %s means SPACE, replace spaces with %s
+
+
+//////////////////////// adb shell input tap
+
+
+adb shell input tap <x> <y>
+Simulate a touchscreen tap X,Y position.
+
+
+adb shell input tap 620 1300
+To find the exact X,Y position go to "Settings" > "Developer Options" > Check the option "Pointer location"
+
+//////////////////////adb shell cat
+
+
+adb shell cat /proc/cpuinfo
+CPU Info
+
+
+adb shell cat /proc/meminfo
+RAM Info
+
+/////////////////////adb shell ifconfig
+
+
+adb shell ifconfig
+Display or configure network interface
+
+
+adb shell ifconfig wlan0
+WiFi Connection Info
+
+
+/////////////////////adb shell screenrecord
+
+
+adb shell screenrecord /sdcard/test.mp4
+Records the device's display to a .mp4 file
+
+adb pull /sdcard/test.mp4
+
+Download test.mp4 file from Android Device.
+adb shell screenrecord [options] <filename>
+
+
+Options:
+
+
+--size WIDTHxHEIGHT
+  Set the video size, e.g. "1280x720". Default is the device's main
+  display resolution (if supported), 1280x720 if not. For best results,
+  use a size supported by the AVC encoder.
+
+
+--bit-rate RATE
+  Set the video bit rate, in bits per second. Value may be specified as
+  bits or megabits, e.g. '4000000' is equivalent to '4M'. Default 20Mbps
+
+
+--bugreport
+  Add additional information, such as a timestamp overlay, that is helpful
+  in videos captured to illustrate bugs.
+
+
+--time-limit TIME
+  Set the maximum recording time, in seconds. Default / maximum is 180.
+
+
+--verbose
+  Display interesting information on stdout.
+
+
+/////////////////////adb shell mount
+
+
+Mount new filesystem(s) on directories. With no arguments, display existing mounts.
+
+mount [-afFrsvw] [-t TYPE] [-o OPTION,] [[DEVICE] DIR]
+-a   mount all entries in /etc/fstab (with -t, only entries of that TYPE)
+
+-O   only mount -a entries that have this option
+
+-f   fake it (don't actually mount)
+
+-r   read only (same as -o ro)
+
+-w   read/write (default, same as -o rw)
+
+-t   specify filesystem type
+
+-v   verbose
+
+OPTIONS is a comma separated list of options, which can also be supplied as --longopts.
+
+This mount autodetects loopback mounts (a file on a directory) and bind mounts (file on file, directory on directory), so you don't need to say --bind or --loop. You can also "mount -a /path" to mount everything in /etc/fstab under /path, even if it's noauto.
+
+
+
+///////////////////adb shell date
+
+adb shell date
+Get the current datetime.
+
+/////////////////adb install
+
+adb install test.apk
+app installation
+
+install [-lrtsdg] [--instant] <PACKAGE-NAME>
+install-multiple [-lrtsdpg] [--instant] PACKAGE...push package(s) to the device and install them
+
+
+
+-l: forward lock application
+
+-r: replace existing application
+
+-t: allow test packages
+
+-s: install application on sdcard
+
+-d: allow version code downgrade (debuggable packages only)
+
+-p: partial application install (install-multiple only)
+
+-g: grant all runtime permissions
+
+--instant: cause the app to be installed as an ephemeral install app
+
+
+///////////////////////////adb shell ping
+
+
+adb shell ping www.google.com
+ping www.google.com
+
+
+//////////////////////////////adb shell am
+
+Activity manager (activity) commands
+
+adb shell am start -n 
+com.android.vending/com.google.android.finsky.activities.MainActivity
+Launch Google Play Store
+
+
+
+//////////////////////////////Open Url
+
+
+adb shell am start|startservice|broadcast <INTENT>[<COMPONENT>]
+-a <ACTION> e.g. android.intent.action.VIEW
+-c <CATEGORY> e.g. android.intent.category.LAUNCHER (start activity intent)
+
+adb shell am start -a android.intent.action.VIEW -d URL (open URL)
+adb shell am start -t image/* -a android.intent.action.VIEW (opens gallery)
+
+
+-------------xxxxxxxxxxxxx---------------

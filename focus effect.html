@@ -1,0 +1,65 @@
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<style>
+body{
+overflow: hidden;
+}
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+img{
+position: absolute;
+width: 110%;
+height: 110%;
+top: -10%;
+left: -10%;
+transition: 1s;
+filter: blur(10px);
+overflow: hidden;
+}
+#focus{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 7em;
+font-family: 'Poppins', sans-serif;
+transition: 1s;
+color: white;
+text-shadow: 2px 2px 4px black;
+cursor: default;
+}
+#focus:hover{
+font-size: 12em;
+filter: blur(15px);
+}
+</style>
+<body>
+<img id="img" src="https://images4.alphacoders.com/601/thumb-1920-601048.jpg"></img>
+<div id="focus">FOCUS</div>
+</body>
+<script>
+var focus=document.getElementById("focus");
+var img=document.getElementById("img");
+
+focus.addEventListener("mouseover",()=>{
+img.style.filter="blur(0px)";
+img.style.width="100%";
+img.style.height="100%";
+img.style.top="0";
+img.style.left="0";
+});
+
+focus.addEventListener("mouseout",()=>{
+img.style.filter="blur(12px)";
+img.style.width="110%";
+img.style.height="110%";
+img.style.top="-10%";
+img.style.left="-10%";
+});
+</script>
+</html>
