@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <audio src="sample.mp3" class="audio"></audio>
+<section class="main">
+
+<div class="logo">
+    <p>To Do List</p>
+    <div class="logo__img"><img src="https://i.ibb.co/1XGkY6v/todomimg.png" alt="todomimg"></div>
+</div>
+
+<div class="subdes">
+    <div class="subdes__title">Get It Done! <img src="https://em-content.zobj.net/source/animated-noto-color-emoji/356/melting-face_1fae0.gif" alt="" srcset=""></div>
+    <div class="subdes__des">Prioritize, organize, and conquer your tasks with a <span>smart</span> and intuitive to-do list that adapts to your daily routine.</div>
+</div>
+
+<div class="input__box">
+<div class="taskInputs">
+    <div class="input__title">Log Tasks hereafter <img src="https://em-content.zobj.net/source/microsoft-teams/363/backhand-index-pointing-down_1f447.png"></div>
+    <div class="errorpopup"></div>
+    <div class="taskInput">
+        <label for="task__input">Title</label>
+        <input type="text" name="task__input" class="task__input" required>
+    </div>
+    <div class="taskInput">
+        <label for="task__textarea">Task</label>
+        <textarea class="task__textarea" name="task__textarea" placeholder="Hit the task"></textarea>
+    </div>
+    <div class="input__lower">
+    <div class="taskInput">
+        <label for="select">Select Priority</label>
+        <select name="select" class="task__select">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+    </div>
+    <div class="taskInput">
+        <label for="task__date">Date</label>
+        <input type="datetime-local" name="task__date" class="task__date">
+    </div>
+    <button type="submit" class="task__btn" onclick="addTask()">Add Task</button>
+    </div>
+</div>
+
+<div class="todoList">
+    <div class="todoList__title">
+        Current Tasks
+        <div class="sort__view__section">
+            <div class="sort__section">
+                <p>Sort by &#8250;</p>
+                <select>
+                    <option name="dont__sort" id="dont__sort" selected> Don't sort </option>
+                    <option name="periority" id="periority"> Priority </option>
+                    <option name="recently__added" id="recently__added"> Date </option>
+                </select>
+            </div>
+            <div class="view__section">
+                <p>View by &#8250;</p>
+                <select>
+                    <option name="all" id="view__all" selected> all </option>
+                    <option name="high" id="view__high"> High </option>
+                    <option name="medium" id="view__medium"> Medium </option>
+                    <option name="low" id="view__low"> Low</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="all__tasks"></div>
+</div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>
